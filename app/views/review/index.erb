@@ -1,0 +1,10 @@
+<h1>Book Reviews </h1>
+<h2><%= @reviews[0].book.title %></h2>
+
+    <% @reviews.each do |b| %> 
+        <b>Username: </b><%= b.user.username %>
+        <b>Star Rating:</b> <%= b.stars %>
+        <b>Comment:</b> <%= b.comment %></p>
+    <% end %>
+
+Go back to book list : <a href="/books">Click Here</a>

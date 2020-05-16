@@ -1,0 +1,14 @@
+<h1>Your Book Review </h1>
+<h2><%= @book.title %></h2>
+
+    <b>User Name:</b> <%= @user.username %>
+    <b>Star Rating:</b> <%= @user_review.stars %>
+    <b>Comment:</b> <%= @user_review.comment %>
+    <form action="/books/<%= @user_review.book_id %>/review/<%= @user_review.id %>" method="post">
+    <input id="hidden" type="hidden" name="_method" value="delete">
+    <input type="submit" value="Delete">
+    </form>
+
+<br><b>Edit :</b> <a href="/books/<%= @user_review.book_id %>/review/<%= @user_review.id %>/edit">Click Here</a><br>
+Go back to book list : <a href="/books">Click Here</a><br>
+Would you like to see the review others left? : <a href="/books/<%= @user_review.book_id %>/review/index">Click Here</a>

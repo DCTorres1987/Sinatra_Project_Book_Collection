@@ -1,0 +1,14 @@
+  
+<br><p>Please leave a review?</p>
+
+<h2><%= @review.book.title %></h2>
+  <form action="/books/<%= @review.book.id %>/review/<%= @review.id %>" method="post">
+  <input id="hidden" type="hidden" name="_method" value="patch">
+    Star Rating: 1 <input type="radio" name="rating" ng-model="selected" value="1" id="rating" placeholder= "<%= @review.stars %>"> 
+               2 <input type="radio" name="rating" ng-model="selected" value="2" id="rating" placeholder= "<%= @review.stars %>">  
+               3 <input type="radio" name="rating" ng-model="selected" value="3" id="rating" placeholder= "<%= @review.stars %>"> 
+               4 <input type="radio" name="rating" ng-model="selected" value="4" id="rating" placeholder= "<%= @review.stars %>"> 
+               5 <input type="radio" name="rating" ng-model="selected" value="5" id="rating" placeholder= "<%= @review.stars %>"> 
+  <br>Comment: <textarea name="commenttext" id= "commenttext" value= "<%= @review.comment %>" placeholder= "<%= @review.comment %>"></textarea>
+  <input type="submit" value="submit">
+</form>

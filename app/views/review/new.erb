@@ -1,0 +1,11 @@
+<br><p>Please leave a review?</p>
+<h2><%= @book.title %></h2>
+<form method="POST" action="/books/<%= @book.id %>/review">
+  Star Rating: 1 <input type="radio" name="rating" ng-model="selected" value="1" id="rating"> 
+               2 <input type="radio" name="rating" ng-model="selected" value="2" id="rating">  
+               3 <input type="radio" name="rating" ng-model="selected" value="3" id="rating"> 
+               4 <input type="radio" name="rating" ng-model="selected" value="4" id="rating"> 
+               5 <input type="radio" name="rating" ng-model="selected" value="5" id="rating"> 
+  <br>Comment: <textarea name="commenttext" id= "commenttext"></textarea>
+  <input type="submit" value="Submit">
+</form>

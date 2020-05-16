@@ -1,0 +1,35 @@
+DATABASE
+Books 
+    has_many Reviews
+    title
+    author
+    picture
+    description
+    published year
+
+Reviews
+    belong_to Users
+    belong_to Books
+    title 
+    description
+
+Users
+    has_many Reviews
+    username
+    password->encrypted
+    email
+
+VIEWS
+
+Everyone will be able to see all the reviews
+=> Current User review shows first with edit button and delete button
+Create a review
+Shows 1 reviw
+
+Seeds in Books AKA no view
+Everyone sees all books
+Shows 1 book
+
+Users log in 
+Users sign up
+Users log out NOT A VIEW 

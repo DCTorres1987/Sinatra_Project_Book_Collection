@@ -1,0 +1,54 @@
+<h1>You are In! Please choose a book to review.</h1>
+
+<div class="a-section a-spacing-large" id="gw-content-grid">
+<div class="a-section a-spacing-none gw-card-layout" id="main-content" data-flow-dir="h" data-grid-breakpoint="sm">
+
+<div class="gw-col desktop-row gwi-row gw-widget-instrument gw-auto-height celwidget csm-placement-id-5b6fbb21-908a-4250-b788-2d983e33f22d 9c2ae915-f765-40d3-ab92-09ca6525fb17:desktop-gateway_BestSellersEbooksStrategy pd_rd_w-mTKHN pd_rd_r-eacd228d-cdbd-4298-acf5-e296365ed46e pd_rd_wg-As7bs" id="desktop-1" data-col-span-ws="4" data-order-ws="2" data-col-span-sm="3" data-order-sm="2" data-display-at="smws" data-pf_rd_p="5b6fbb21-908a-4250-b788-2d983e33f22d" data-gwi='{"visible":"desktop-1-visible","active":"desktop-1-active"}' data-ref_="pd_gw_zg_ebk" data-pd_rd_wg="As7bs" data-pd_rd_r="eacd228d-cdbd-4298-acf5-e296365ed46e" data-pd_rd_w="mTKHN" data-csa-c-id="okkn6t-9ye5yi-ga06nh-vnx4a8" data-cel-widget="desktop-1">
+
+<div class="a-section a-spacing-none shogun-widget card-lite product-shoveler aui-desktop fresh-shoveler ameyal-product-shoveler" id="OsavARwd5zIPyXYa6GVW2w">
+    <div class="a-section as-title-block">
+        <h2 class="as-title-block-left">
+            <span class="a-color-base">Best sellers in Kindle eBooks</span>
+        </h2>
+    <span class="as-title-block-right"></span></div>
+
+    <div class="a-section a-spacing-none feed-carousel first-carousel">
+
+        <div class="a-section feed-carousel-viewport">
+            <ul class="a-unordered-list a-nostyle a-horizontal feed-carousel-shelf" role="list" style="left: 0px;">
+
+                <% Book.all.each  do |book| %>
+                    <li class="feed-carousel-card" role="listitem" aria-hidden="false" aria-posinset="2" aria-setsize="20" style="display: inline-block;" data-sgproduct='{"asin":"B07YKTYZJ6"}'>
+                        <span class="a-list-item">
+                            <a class="a-link-normal" href="/books/<%= book.id %>">
+                                <img height="200" class="product-image" alt="<%= book.title%>" src="<%= book.image%>" >
+                            </a>
+                        </span>
+                    </li>
+    
+
+                <% end %>    
+            </ul>
+
+            <% <div class="spinner" aria-hidden="true" style="display: none;">
+                <i class="gw-spinner" role="presentation"></i>
+            </div>
+        </div>
+
+        <a tabindex="-1" class="a-link-normal feed-carousel-control feed-left feed-control-disabled" aria-hidden="true" style="display: inline;" aria-label="Carousel previous slide" href="#">
+            <span class="gw-icon feed-arrow"></span>
+        </a> 
+            
+        <a tabindex="-1" class="a-link-normal feed-carousel-control feed-right" aria-hidden="true" style="display: inline;" aria-label="Carousel next slide" href="#">
+            <span class="gw-icon feed-arrow"></span>
+        </a>
+
+        <span class="feed-scrollbar">
+            <span class="feed-scrollbar-track">
+                <span class="feed-scrollbar-thumb" style="left: 0px; width: 271.28px; display: none;"></span>
+            </span>
+        </span>
+    </div>
+
+
+</div>
