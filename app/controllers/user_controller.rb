@@ -1,3 +1,4 @@
+# inherits application controller
 class UserController < ApplicationController
 
 # Renders Sign up page
